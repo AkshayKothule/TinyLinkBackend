@@ -5,11 +5,7 @@ require("dotenv").config();
 const app=express();
 const cors = require("cors")
 const linkrouter=require("./router/linkRouter")
-app.use(cors({
-  origin: 'https://tubular-beijinho-bfbfed.netlify.app/',
-  methods: ['GET','POST','DELETE','PUT','PATCH','OPTIONS'],
-  credentials: true
-}));
+app.use(cors());
 
 //middleware
 app.use(express.json());
