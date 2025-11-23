@@ -5,11 +5,7 @@ require("dotenv").config();
 const app=express();
 const cors = require("cors")
 const linkrouter=require("./router/linkRouter")
-app.use(cors({
-  origin: 'http://localhost:5173',
-  methods: ['GET','POST','DELETE','PUT','PATCH','OPTIONS'],
-  credentials: true
-}));
+app.use(cors());
 
 //middleware
 app.use(express.json());
